@@ -1,6 +1,7 @@
 import React from 'react';
 import { Table, TableBody } from '@material-ui/core';
 import TableHeader from './tableHeader';
+import TableRowWrapper from './tableRow';
 
 interface TableWrapperProps {
   rows: string[][],
@@ -15,7 +16,9 @@ const TableWrapper = ({
     <Table>
       <TableHeader columnNames={columnNames} />
       <TableBody>
-        {rows.map(row => )}
+        {rows.map(row => 
+          <TableRowWrapper row={row} />  
+        )}
       </TableBody>
     </Table>
   );

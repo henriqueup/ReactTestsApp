@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TableWrapper from './components/table/table';
+import { columnNames, data } from './tableMock';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           Learn React
         </a>
       </header>
+
+      <TableWrapper rows={data} columnNames={columnNames}/>
     </div>
   );
 }

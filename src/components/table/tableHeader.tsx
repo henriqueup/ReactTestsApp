@@ -1,5 +1,5 @@
 import React from 'react';
-import { TableHead, TableRow } from '@material-ui/core';
+import { TableHead, TableRow, TableCell } from '@material-ui/core';
 
 interface TableHeaderProps {
   columnNames: string[]
@@ -13,7 +13,11 @@ const TableHeader = ({
       {columnNames && columnNames.length &&
         <TableHead>
           <TableRow>
-            
+            {columnNames.map(item => 
+              <TableCell>
+                {item}
+              </TableCell>  
+            )}
           </TableRow>
         </TableHead>
       }
